@@ -1,2 +1,1 @@
-# github-actions-terraform-cicd
-github-actions-terraform-cicd
+Deploy AWS Infrastructures with Terraform and GitHub Actions.
