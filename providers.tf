@@ -6,9 +6,9 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "terraform-cicd-with-github-actions"
-    region = "us-east-1"
-    key = "dev/terraform.tfstate"
+    bucket         = "terraform-cicd-with-github-actions"
+    region         = "us-east-1"
+    key            = "dev/terraform.tfstate"
     dynamodb_table = "terraform-cicd-with-github-actions"
   }
 }
