@@ -4,7 +4,11 @@ on:
   push:
     branches:
       - main
-
+    paths-ignore:
+      - '**/**.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - '**/**.hcl'
 jobs:
   deploy:
     runs-on: ubuntu-latest
