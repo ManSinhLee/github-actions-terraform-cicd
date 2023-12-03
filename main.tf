@@ -9,9 +9,14 @@ module "dev-vpc" {
   private_subnets  = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
   database_subnets = ["10.0.7.0/24", "10.0.8.0/24", "10.0.9.0/24"]
 
-  enable_nat_gateway = true
-  enable_vpn_gateway = false
-  single_nat_gateway = true
+  enable_nat_gateway                 = true
+  enable_vpn_gateway                 = false
+  single_nat_gateway                 = true
+  enable_dns_support                 = true
+  enable_dns_hostnames               = true
+  create_database_subnet_group       = true
+  create_database_subnet_route_table = true
+  create_database_nat_gateway_route  = true
 
   tags = {
     Terraform   = "true"
@@ -30,10 +35,14 @@ module "prd-vpc" {
   private_subnets  = ["10.10.4.0/24", "10.10.5.0/24", "10.10.6.0/24"]
   database_subnets = ["10.10.7.0/24", "10.10.8.0/24", "10.10.9.0/24"]
 
-  enable_nat_gateway = true
-  enable_vpn_gateway = false
-  single_nat_gateway = false
-
+  enable_nat_gateway                 = true
+  enable_vpn_gateway                 = false
+  single_nat_gateway                 = false
+  enable_dns_support                 = true
+  enable_dns_hostnames               = true
+  create_database_subnet_group       = true
+  create_database_subnet_route_table = true
+  create_database_nat_gateway_route  = true
   tags = {
     Terraform   = "true"
     Environment = "prd"
